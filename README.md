@@ -46,8 +46,7 @@ We used the following datasets in our project.
 
 - **Betti Curves**: We demonstrated the Betti curves using our defined functions.
 
-- **Permutation Test Plots**: We employed the seaborn.kdeplot function from the Seaborn data visualization package for generating KDE (Kernel Density Estimation) plots of our permutation distributions.
-
+- **Permutation Test Plots**: We employed the `seaborn.kdeplot` function from the Seaborn data visualization package for generating KDE (Kernel Density Estimation) plots of our permutation distributions. This allowed us to visualize the density estimators for our permutation distributions.
 
 ```bash
 # Example installation instructions
