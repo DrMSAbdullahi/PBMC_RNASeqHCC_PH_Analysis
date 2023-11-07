@@ -20,7 +20,7 @@ This project is designed to complement the codebase used in our research paper. 
 
 We used the following datasets in our project. 
 
-- **RNA-Seq Gene Expression Dataset**: This dataset comprises 262,575 gene expressions from 34 samples, with 17 representing healthy samples and 17 representing disease samples. The original dataset was sourced from the study by Han et al., titled 'RNA-seq profiling reveals PBMC RNA as a potential biomarker for hepatocellular carcinoma.' For access to the original sequencing data, please refer to NCBI project PRJNA739257 [here](https://dataview.ncbi.nlm.nih.gov/object/PRJNA739257).
+- **RNA-Seq Gene Expression Dataset**: This dataset comprises 26,575 gene expressions from 34 samples, with 17 representing healthy samples and 17 representing disease samples. The original dataset was sourced from the study by Han et al.[1], titled 'RNA-seq profiling reveals PBMC RNA as a potential biomarker for hepatocellular carcinoma.' For access to the original sequencing data, please refer to NCBI project PRJNA739257 [here](https://dataview.ncbi.nlm.nih.gov/object/PRJNA739257).
 
 - **KEGG Pathways Dataset**: We obtained KEGG pathway datasets from the KEGG database using R software (version 4.3.0). Our focus was specifically on the 230 signaling and disease pathways, each of which consists of a minimum of 25 genes. Additionally, at least 70% of the genes from each pathway were required to be present in our gene expression dataset.
 
@@ -28,7 +28,7 @@ We used the following datasets in our project.
 
 ### Project Dependencies
 
-- **Gudhi Library (Python Version)**: We utilized the 'Gudhi' library [1] (version 3.7.1) for performing computations and visualizations of persistent homology. You can find the Python version of 'Gudhi' at [https://gudhi.inria.fr/](https://gudhi.inria.fr/).
+- **Gudhi Library (Python Version)**: We utilized the 'Gudhi' library [2] (version 3.7.1) for performing computations and visualizations of persistent homology. You can find the Python version of 'Gudhi' at [https://gudhi.inria.fr/](https://gudhi.inria.fr/).
 
 ### Persistent Homology Computation
 
@@ -68,6 +68,8 @@ Differential enrichment analysis of pathways was carried out using `Scipy' packa
 ## License
 
 Statement on License goes here.
+
+
 
 [1] Han, Z. et al. (2021). 'RNA-seq profiling reveals PBMC RNA as a potential biomarker for hepatocellular carcinoma.' Sci. Reports, 11, 17797.
 
