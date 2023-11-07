@@ -46,6 +46,8 @@ We used the following datasets in our project.
 
 - **Betti Curves**: We demonstrated the Betti curves using our defined functions.
 
+- **Permutation Test Plots**: We employed the seaborn.kdeplot function from the Seaborn data visualization package for generating KDE (Kernel Density Estimation) plots of our permutation distributions.
+
 
 ```bash
 # Example installation instructions
@@ -70,6 +72,7 @@ Differential enrichment analysis of pathways was carried out using `Scipy' packa
 Statement on License goes here.
 
 
+#### References
 
 [1] Han, Z. et al. (2021). 'RNA-seq profiling reveals PBMC RNA as a potential biomarker for hepatocellular carcinoma.' Sci. Reports, 11, 17797.
 
