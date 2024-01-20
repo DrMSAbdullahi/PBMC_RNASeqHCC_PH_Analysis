@@ -1,7 +1,7 @@
 # Persistent homology identifies pathways associated with HCC from PBMC samples
 
 This is a supplementary material for codes used in the paper:
-Abdullahi et al., "Persistent homology identifies pathways associated with hepatocellular carcinoma from peripheral blood samples", Submitted to "Mathematics" November, 2023.
+Abdullahi et al., "Persistent homology identifies pathways associated with hepatocellular carcinoma from peripheral blood samples", Submitted to "Mathematics" January, 2024.
 
 ## Table of Contents
 
@@ -14,7 +14,7 @@ Abdullahi et al., "Persistent homology identifies pathways associated with hepat
 
 ## Introduction
 
-This project is designed to complement the codebase used in our research paper. In the paper, we employed topological data analysis, specifically the persistent homology method, to identify crucial pathways associated with hepatocellular carcinoma using peripheral blood mononuclear cell (PBMC) samples.
+This project is designed to complement the codebase used in our research paper. In the paper, we employed topological data analysis, specifically the persistent homology method, to identify key pathways for early detection of hepatocellular carcinoma (HCC) from peripheral blood mononuclear cell (PBMC) samples.
 
 ## Datasets
 
@@ -32,7 +32,7 @@ We used the following datasets in our project.
 
 ### Persistent Homology Computation
 
-- **Inter-Sample Dissimilarity Distance Matrix**: The persistent homology computations were based on the inter-sample dissimilarity distance matrix, calculated using the complement of the Pearson correlation coefficient (1 - p).
+- **Inter-Sample Dissimilarity Distance Matrix**: The persistent homology computations were based on the inter-sample dissimilarity distance matrix, calculated using the complement of the Pearson correlation coefficient p (i.e., 1 - p).
 
 - **VR Complexes Construction**: We adopted the VR complexes construction method to create the simplicial complexes for our sample point clouds.
 
@@ -48,19 +48,13 @@ We used the following datasets in our project.
 
 - **Permutation Test Plots**: We employed the `seaborn.kdeplot` function from the Seaborn data visualization package for generating KDE (Kernel Density Estimation) plots of our permutation distributions. This allowed us to visualize the density estimators for our permutation distributions.
 
-```bash
-# Example installation instructions
-npm install
-npm start
-```
-
 ## Permutation Test
 
-Two-tailed statistical permutation tests was performed using Python (version 3.10.7) and the Benjamini–Hochberg correction method was adopted for multiple testing using 'statsmodels' package (version 0.13.5). The \ac{fdr} threshold was set to less than 0.05 throughout.
+A two-tailed statistical permutation test was performed using Python (version 3.10.7) and the Benjamini–Hochberg correction method was adopted for multiple testing using 'statsmodels' package (version 0.13.5). The \ac{fdr} threshold was set to less than 0.05 throughout.
 
 ## Gene Diffrential Expression Analysis
 
-Differential expression analysis was performed using the `PyDESeq2' \cite{muzellec2023pydeseq2} package (version 0.3.0) in Python (version 3.10.7). Only genes with adjusted p-value $< 0.05$ (adjusted using the Benjamini-Hochberg method), and log fold change $\geq 1$ were considered as significantly differentially expressed.
+Differential expression analysis was performed using the `PyDESeq2' \cite{muzellec2023pydeseq2} package (version 0.4.4) in Python (version 3.10.7). Only genes with adjusted p-value $< 0.05$ (adjusted using the Benjamini-Hochberg method), and log fold change $\geq 1$ were considered as significantly differentially expressed.
 
 ## Pathway Enrichment Analysis
 
