@@ -1,7 +1,7 @@
 # Persistent homology identifies pathways associated with HCC from PBMC samples
 
 This is a supplementary material for codes used in the paper:
-Abdullahi et al., "Persistent homology identifies pathways associated with hepatocellular carcinoma from peripheral blood samples", Submitted to "Mathematics" January, 2024.
+Abdullahi et al., "Persistent homology identifies pathways associated with hepatocellular carcinoma from peripheral blood samples", Mathematics 2024, 12(5), 725.
 
 ## Table of Contents
 
@@ -22,7 +22,7 @@ We used the following datasets in our project.
 
 - **RNA-Seq Gene Expression Dataset**: This dataset comprises 26,575 gene expressions from 34 samples, with 17 representing healthy samples and 17 representing disease samples. The original dataset was sourced from the study by Han et al.[1], titled 'RNA-seq profiling reveals PBMC RNA as a potential biomarker for hepatocellular carcinoma.' For access to the original sequencing data, please refer to NCBI project PRJNA739257 [here](https://dataview.ncbi.nlm.nih.gov/object/PRJNA739257).
 
-- **KEGG Pathways Dataset**: We obtained KEGG pathway datasets from the KEGG database using R software (version 4.3.0). Our focus was specifically on the 230 signaling and disease pathways, each of which consists of a minimum of 25 genes. Additionally, at least 70% of the genes from each pathway were required to be present in our gene expression dataset.
+- **KEGG Pathways Dataset**: We obtained KEGG pathway datasets from the KEGG database using R software (version 4.3.0). Our focus was specifically on the 251 metabolic and signaling pathways.
 
 ## Topological Data Analysis
 
@@ -42,9 +42,9 @@ We used the following datasets in our project.
 
 ### Visualization
 
-- **Persistence Diagrams and Barcodes**: All persistence diagrams and persistence barcodes were respectively plotted using the 'plot_persistence_diagram' and 'plot_persistence_barcode' functions from the 'Gudhi' library in Python.
+- **Persistence Diagrams and Barcodes**: All persistence diagrams and persistence barcodes were plotted using the 'plot_persistence_diagram' and 'plot_persistence_barcode' functions from the 'Gudhi' library in Python.
 
-- **Betti Curves**: We demonstrated the Betti curves using our defined functions.
+- **Betti Curves**: We demonstrated the Betti curves using our own defined functions.
 
 - **Permutation Test Plots**: We employed the `seaborn.kdeplot` function from the Seaborn data visualization package for generating KDE (Kernel Density Estimation) plots of our permutation distributions. This allowed us to visualize the density estimators for our permutation distributions.
 
@@ -52,18 +52,36 @@ We used the following datasets in our project.
 
 A two-tailed statistical permutation test was performed using Python (version 3.10.7) and the Benjamini–Hochberg correction method was adopted for multiple testing using 'statsmodels' package (version 0.13.5). The \ac{fdr} threshold was set to less than 0.05 throughout.
 
-## Gene Diffrential Expression Analysis
+## Gene Differential Expression Analysis
 
 Differential expression analysis was performed using the `PyDESeq2' \cite{muzellec2023pydeseq2} package (version 0.4.4) in Python (version 3.10.7). Only genes with adjusted p-value $< 0.05$ (adjusted using the Benjamini-Hochberg method), and log fold change $\geq 1$ were considered as significantly differentially expressed.
 
 ## Pathway Enrichment Analysis
 
-Differential enrichment analysis of pathways was carried out using `Scipy' package (version 1.10.1) in Python (version 3.10.7).
+Differential enrichment analysis of pathways was carried out using the `Scipy' package (version 1.10.1) in Python (version 3.10.7).
 
 ## License
 
-Statement on License goes here.
+Copyright [Year] [Your Name or Organization]
 
+This codebook is licensed under the [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
+
+**You are free to:**
+- **Share:** Copy and redistribute the material in any medium or format.
+- **Adapt:** Remix, transform, and build upon the material for any purpose, even commercially.
+
+**Under the following terms:**
+- **Attribution:** You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
+
+**No additional restrictions:** You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.
+
+This codebook is provided "as is," without any warranty or guarantee of fitness for a particular purpose. The codebook's users are solely responsible for their use and any consequences thereof.
+
+If you use this codebook in your research or publication, please cite the original paper:
+
+[Abdullahi, M.S.; Suratanee, A.; Piro, R.M.; Plaimas, K. "Persistent Homology Identifies Pathways Associated with Hepatocellular Carcinoma from Peripheral Blood Samples". Mathematics 2024, 12, 725. https://doi.org/10.3390/math12050725]
+
+For questions or additional permissions, contact [abdullahi.sirajo@udusok.edu.ng].
 
 #### References
 
