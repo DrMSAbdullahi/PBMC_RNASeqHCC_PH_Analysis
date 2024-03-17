@@ -20,7 +20,7 @@ This project is designed to complement the codebase used in our research paper. 
 
 We used the following datasets in our project. 
 
-- **RNA-Seq Gene Expression Dataset**: This dataset comprises 26,575 gene expressions from 34 samples, with 17 representing healthy samples and 17 representing disease samples. The original dataset was sourced from the study by Han et al.[1], titled 'RNA-seq profiling reveals PBMC RNA as a potential biomarker for hepatocellular carcinoma.' For access to the original sequencing data, please refer to NCBI project PRJNA739257 [here](https://dataview.ncbi.nlm.nih.gov/object/PRJNA739257).
+- **RNA-Seq Gene Expression Dataset**: This dataset comprises 26,575 gene expressions from 34 samples, with 17 representing healthy samples and 17 representing disease samples. The original dataset was sourced from the study by Han et al.[1], titled 'RNA-seq profiling reveals PBMC RNA as a potential biomarker for hepatocellular carcinoma.' To access the original sequencing data, please refer to NCBI project PRJNA739257 [here](https://dataview.ncbi.nlm.nih.gov/object/PRJNA739257).
 
 - **KEGG Pathways Dataset**: We obtained KEGG pathway datasets from the KEGG database using R software (version 4.3.0). Our focus was specifically on the 251 metabolic and signaling pathways.
 
@@ -54,7 +54,7 @@ A two-tailed statistical permutation test was performed using Python (version 3.
 
 ## Gene Differential Expression Analysis
 
-Differential expression analysis was performed using the `PyDESeq2' \cite{muzellec2023pydeseq2} package (version 0.4.4) in Python (version 3.10.7). Only genes with adjusted p-value $< 0.05$ (adjusted using the Benjamini-Hochberg method), and log fold change $\geq 1$ were considered as significantly differentially expressed.
+Differential expression analysis was performed using the `PyDESeq2' [3] package (version 0.4.4) in Python (version 3.10.7). Only genes with adjusted p-value $< 0.05$ (adjusted using the Benjamini-Hochberg method), and log fold change $\geq 1$ were considered as significantly differentially expressed.
 
 ## Pathway Enrichment Analysis
 
@@ -83,6 +83,8 @@ For questions or additional permissions, contact [abdullahi.sirajo@udusok.edu.ng
 
 #### References
 
-[1] Han, Z. et al. (2021). 'RNA-seq profiling reveals PBMC RNA as a potential biomarker for hepatocellular carcinoma.' Sci. Reports, 11, 17797.
+[1] Han, Z., Feng, W., Hu, R., Ge, Q., Ma, W., Zhang, W., Xu, S., Zhan, B., Zhang, L., Sun, X. et al. (2021). 'RNA-seq profiling reveals PBMC RNA as a potential biomarker for hepatocellular carcinoma.' Sci. Reports, 11, 17797.
 
-[2] Maria, C., Oudot, S.Y., & Glisse, M. (2014). 'Gudhi: Merging computational topology and geometric data analysis.' Proceedings of the 30th International Symposium on Computational Geometry (SoCG).
+[2] Maria, C., Oudot, S.Y., Glisse, M. (2014). 'Gudhi: Merging computational topology and geometric data analysis.' Proceedings of the 30th International Symposium on Computational Geometry (SoCG).
+
+[3] Muzellec, B., Teleńczuk, M., Cabeli, V., Andreux, M. (2023). 'PyDESeq2: A Python Package for Bulk RNA-Seq Differential Expression Analysis.' Bioinformatics, 39, btad547.
